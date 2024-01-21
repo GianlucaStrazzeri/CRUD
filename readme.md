@@ -6,8 +6,9 @@ En este ejercicio, se te pide crear una API simple para realizar operaciones CRU
 
 ## Instrucciones
 
-1. **Instalar Dependencias:**
+1. **Instalar Dependencias:** ---->instalado express -E
    - npm install
+   
 
 2. **Endpoints Disponibles:**
    - `GET /usuarios`: Obtiene la lista de todos los usuarios.
@@ -20,7 +21,7 @@ Puedes añadir más rutas si las necesitas o piensas que te pueden servir para h
    - Utiliza herramientas como Postman o cURL para realizar operaciones CRUD en la API.
    - Ejemplo: Para acceder al usuario Ryu, realiza una solicitud `GET` a `http://localhost:3000/usuarios/Ryu`.
 
-**Añade a tu código**
+**Añade a tu código** --HECHO
 - Añade estas 2 líneas en `app.js` por encima de todas tus rutas para que no te generen errores de lectura. 
 
 ```javascript
