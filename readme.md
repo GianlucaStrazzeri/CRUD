@@ -6,8 +6,9 @@ En este ejercicio, se te pide crear una API simple para realizar operaciones CRU
 
 ## Instrucciones
 
-1. **Instalar Dependencias:** ---->instalado express -E
-   - npm install
+1. **Instalar Dependencias:** 
+   - npm install 
+   - npm init -y para inicializar npm
    
 
 2. **Endpoints Disponibles:**

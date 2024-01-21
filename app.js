@@ -15,20 +15,24 @@ let usuarios = [
 ];
 
 app.get('/', (req, res) => {
-    res.send(`<h1>Home</h1>
-    <h2>Lista de usuarios</h2>
+    res.send(`<a href="/"><h1> Home </h1></a>
+    <a href="/usuarios"> Usuarios </a>
+      <a href='/usuarios/:nombre'> Nombre </a>
+    <h2>Lista de streetfighters</h2>
      <ul> 
     ${usuarios
       .map((usuario) => `<li>ID: ${usuario.id} | Nombre: ${usuario.nombre} | 
       Edad: ${usuario.edad} Procedencia: ${usuario.lugarProcedencia}</li>`)
       .join('')}
-      <a href="/usuarios"> Usuarios </a>
+      
   `);
 });
 
 app.get('/usuarios', (req, res) => {
-    res.send(`<h1>Usuarios</h1>
-    <h2>Lista de usuarios</h2>
+    res.send(`<a href="/"><h1> Usuarios </h1></a>
+    <a href="/"> Home </a>
+      <a href='/usuarios/:nombre'> Nombre </a>
+    <h2>Lista de streetfighters</h2>
      <ul> 
     ${usuarios
       .map((usuario) => `<li>ID: ${usuario.id} | Nombre: ${usuario.nombre}</li>`)
@@ -38,14 +42,26 @@ app.get('/usuarios', (req, res) => {
   <input type="text" id="nombre" name="nombre" required>
   <label for "edad">Edad</label>
   <input type="text" id="edad" name="edad" required>
-  <label for "lugarProcedencia">lugarProcedencia</label>
+  <label for "lugarProcedencia">Procedencia</label>
   <input type="text" id="edad" name="lugarProcedencia" required>
   <br>
 <button type="submit">Agregar usuario </button>
 
 </form>
-      <a href="/"> Home </a>
+      
   `);
+});
+
+app.get('/usuarios/:nombre', (req, res) => {
+    res.send(`<h1>Usuarios</h1>
+    <a href="/"> Home </a>
+    <h2>Lista de streetfighters</h2>
+     <ul> 
+    ${usuarios
+      .map((usuario) => `<li> Nombre: ${usuario.nombre}</li>`)
+      .join('')}
+      
+      `);
 });
 
 app.post('/usuarios', (req, res) => {
