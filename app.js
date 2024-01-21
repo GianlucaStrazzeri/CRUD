@@ -76,6 +76,11 @@ app.post('/usuarios', (req, res) => {
   });
 
 
+
+
+
 app.listen(3000, () => {
     console.log('express está escuchando en el puerto 3000');
   });
+
+  module.exports = {usuarios}; //exporto  usuarios para poderlos utilizar en routes.js
